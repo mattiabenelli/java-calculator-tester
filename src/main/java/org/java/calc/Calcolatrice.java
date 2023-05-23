@@ -33,7 +33,10 @@ public class Calcolatrice {
 		return num1 - num2;
 	}
 	
-	public float divide() {
+	public float divide() throws Exception {
+		if(num2 == 0) {
+			throw new IllegalAccessException();
+		}
 		return num1 / num2;
 	}
 	public float multiply() {

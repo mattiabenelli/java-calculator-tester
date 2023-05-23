@@ -1,6 +1,8 @@
 package org.java.calc;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +14,7 @@ public class CalcolatriceTest {
 	@BeforeEach
 	public void init() {
 		final float num1 = 40;
-		final float num2 = 10;
+		final float num2 = 0;
 		
 		c = new Calcolatrice(num1, num2);
 	}
@@ -38,13 +40,24 @@ public class CalcolatriceTest {
 	}
 	
 	@Test
-	public void getDivideTest() {
+	public void getDivideTest() throws Exception {
+		
+		assumeTrue(c.getNum2() != 0);
 		
 		final float attRes = c.getNum1() / c.getNum2();
 		
 		final float res = c.divide();
 		
 		assertEquals(attRes, res, "divisione tra interi");
+	}
+	@Test
+	public void getDivExcTest() {
+		
+		assumeTrue(c.getNum2() == 0);
+		
+		assertThrows(IllegalAccessException.class,
+				() -> c.divide(),
+				"Deve sollevare eccezione");
 	}
 	
 	@Test

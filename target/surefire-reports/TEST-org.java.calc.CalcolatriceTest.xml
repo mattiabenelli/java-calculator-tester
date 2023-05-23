@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.java.calc.CalcolatriceTest" time="0.031" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.java.calc.CalcolatriceTest" time="0.037" tests="5" errors="0" skipped="1" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IT"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\pasca\AppData\Local\Temp\surefire8383607745091460581\surefirebooter18437104196826729340.jar C:\Users\pasca\AppData\Local\Temp\surefire8383607745091460581 2023-05-23T15-27-23_886-jvmRun1 surefire4540227616733975186tmp surefire_016192621699926292123tmp"/>
+    <property name="sun.java.command" value="C:\Users\pasca\AppData\Local\Temp\surefire7070271249972385289\surefirebooter12666633138282651457.jar C:\Users\pasca\AppData\Local\Temp\surefire7070271249972385289 2023-05-23T16-39-04_443-jvmRun1 surefire6793975890361110248tmp surefire_017449532919743886934tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\pasca\eclipse-workspace\org.java.calc\target\test-classes;C:\Users\pasca\eclipse-workspace\org.java.calc\target\classes;C:\Users\pasca\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0-M1\junit-jupiter-engine-5.10.0-M1.jar;C:\Users\pasca\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0-M1\junit-platform-engine-1.10.0-M1.jar;C:\Users\pasca\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\pasca\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0-M1\junit-platform-commons-1.10.0-M1.jar;C:\Users\pasca\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0-M1\junit-jupiter-api-5.10.0-M1.jar;C:\Users\pasca\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\pasca\AppData\Local\Temp\surefire8383607745091460581\surefirebooter18437104196826729340.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\pasca\AppData\Local\Temp\surefire7070271249972385289\surefirebooter12666633138282651457.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10"/>
@@ -60,5 +60,11 @@
   </properties>
   <testcase name="getSubtractTest" classname="org.java.calc.CalcolatriceTest" time="0.016"/>
   <testcase name="getAddTest" classname="org.java.calc.CalcolatriceTest" time="0"/>
-  <testcase name="getDivideTest" classname="org.java.calc.CalcolatriceTest" time="0.001"/>
+  <testcase name="getDivExcTest" classname="org.java.calc.CalcolatriceTest" time="0.002"/>
+  <testcase name="getDivideTest" classname="org.java.calc.CalcolatriceTest" time="0">
+    <skipped message="Assumption failed: assumption is not true" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Assumption failed: assumption is not true
+	at org.java.calc.CalcolatriceTest.getDivideTest(CalcolatriceTest.java:45)
+</skipped>
+  </testcase>
+  <testcase name="getMultiplyTest" classname="org.java.calc.CalcolatriceTest" time="0.001"/>
 </testsuite>
